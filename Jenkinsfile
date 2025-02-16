@@ -2,18 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('NPM Install') {
             steps {
-                echo 'Building...'
-                // Add your build steps here
-
-                echo 'Hello world'
+                bat 'npm install'
             }
         }
-        stage('Test') {
+        stage('Run integration tests') {
             steps {
-                echo 'Testing...'
-                // Add your test steps here
+                bat 'npm run test'
             }
         }
         stage('Deploy') {
