@@ -6,6 +6,8 @@ pipeline {
             steps {
                 echo 'Building...'
                 // Add your build steps here
+
+                bat 'Hello world'
             }
         }
         stage('Test') {
